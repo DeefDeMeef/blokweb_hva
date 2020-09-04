@@ -58,11 +58,16 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je startniveau:** Rood
 
-**Je focus:** Responsive
+**Je focus:** Responsive design
 
 **Je opdracht:** https://www.bol.com/nl/
 
 **Screenshot(s):**
+Mobiele versie:
+
+![alt text](images/screencapture-bol-nl-2020-09-04-10_46_58.png)
+
+Desktop versie:
 
 ![alt text](images/screencapture-bol-nl-2020-09-03-14_55_31.png)
 
