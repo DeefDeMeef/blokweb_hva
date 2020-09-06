@@ -56,21 +56,23 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Intake (week 1)
 
-**Je startniveau:** Rood
+**Je startniveau:** Rood, er is altijd genoeg te leren.
 
-**Je focus:** Responsive design
+**Je focus:** Responsive design, ik wil graag bekijken hoe responsive design werkt in development. 
 
-**Je opdracht:** https://www.bol.com/nl/
+**Je opdracht:** https://store.ubi.com/nl/
 
 **Screenshot(s):**
 Mobiele versie:
 
-![alt text](images/screencapture-bol-nl-2020-09-04-10_46_58.png)
+![Ubisoft website mobile](images/ubisoft-mobile.png)
 
-Desktop versie:
+Tablet versie:
 
-![alt text](images/screencapture-bol-nl-2020-09-03-14_55_31.png)
+![Ubisoft website tablet](images/ubisoft-tablet.png)
+
+![Ubisoft website desktop](images/ubisoft-desktop.png)
 
 **Breakdown-schets(en):**
 
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/dummy-image.svg)
+
