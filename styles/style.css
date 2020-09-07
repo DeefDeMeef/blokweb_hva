@@ -3,3 +3,88 @@
   box-sizing:border-box;  
 }
 
+@font-face {
+  font-family: 'Ubisoft';
+  src:  url('../fonts/ubisoftsans-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ubisoft-bold';
+  src: url('../fonts/ubisoftsans-bold.woff') format('woff');
+}
+
+body {
+  font-family: "Ubisoft";
+  background: #e5e8f0;
+  padding: 0px;
+  margin: 0px;
+  color: #0a0a0a;
+}
+
+/* start header css */
+.main-nav {
+  background: #fff;
+  display: grid;
+  grid-template-areas:
+    'hamburger logo logo logo acount-menu acount-menu'
+    'form form form form form form';
+  grid-gap: 10px;
+  padding: 7.5px 7.5px 0px;
+}
+
+.main-nav button {
+  grid-area: hamburger;
+  border: none;
+  background: #fff;
+}
+
+.main-nav a {
+  grid-area: logo;
+  width: 100px;
+  height: auto;
+}
+
+.main-nav ul {
+  grid-area: acount-menu;
+  margin: 0;
+}
+
+.main-nav ul li {
+  display:block;
+	float:left;
+  padding: 12px 10px;
+}
+
+.main-nav form {
+  grid-area: form;
+  height: 40px;
+  border-top: 1px solid #dbdde4;
+  margin-top: -10px;
+  padding: 5px;
+}
+
+.main-nav form input[type="text"] {
+  height: 100%;
+  float: left;
+  width: 75%;
+  margin-left: 22px;
+  color: #9ea9bd;
+  border: none;
+  font-size: 12px;
+  font-family: 'Ubisoft';
+  border-left: 3px solid #0089a3;
+  padding-left: 22px;
+}
+
+.main-nav form button {
+  height: 100%;
+  float: right;
+  width: 15%;
+}
+/* einde header css */
+
+/* start carousel section 1 */
+.carousel-container img {
+  height: 100%;
+  width: 100%;
+}
