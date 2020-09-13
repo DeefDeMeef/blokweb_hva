@@ -13,7 +13,7 @@
 	<header>
 		<nav class="main-nav">
 			<!-- hamburger menu svg/button -->
-			<button>
+			<button id="open-sidebar">
 				<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 500 500">
 					<path
 						d="M37.545 33.898C16.895 33.898 0 43.462 0 55.15v.001C0 66.84 16.896 76.403 37.545 76.403h424.91c20.648 0 37.545-9.563 37.545-21.252v-.002c0-11.687-16.897-21.25-37.545-21.25zM37.545 228.746C16.895 228.746.002 238.31.002 250c0 11.69 16.894 21.255 37.543 21.255h424.91c20.648 0 37.543-9.565 37.543-21.255 0-11.689-16.896-21.253-37.545-21.253zM37.545 425.713C16.895 425.713 0 435.754 0 448.026c0 12.273 16.896 22.313 37.545 22.313h424.91c20.648 0 37.545-10.04 37.545-22.313 0-12.272-16.897-22.313-37.545-22.313z"
@@ -70,21 +70,36 @@
 				</button>
 			</form>
 		</nav>
+
+		<nav class="sidebar" id="sidebar">
+			<button id="close-sidebar">sluiten &times;</button>
+			<ul>
+				<li>item 1</li>
+				<li>item 1</li>
+				<li>item 1</li>
+				<li>item 1</li>
+				<li>item 1</li>
+			</ul>
+		</nav>
 	</header>
 
-	<section class="carousel-container">
-		<img src="img/carousel-rs6-mobile-1536x1790.jpg" alt="Ubisoft game: Rainbow Six Siege">
-		<h2>Behoud je progressie na het gratis spelen</h2>
-		<h3>Shop de game nu met 67% korting</h3>
-		<button>bekijk nu</button>
-		<p>Free week eindigt 4/9 2020</p>
-
-		<img src="img/carousel-farcry-mobile-1536x1790.jpg" alt="Ubisoft games">
-		<h2>Check onze komende games</h2>
-		<h3>Krijg 20% korting met 100 Club Units</h3>
-		<button>Pre-Order</button>
-	</section>
-
+	<main>
+		<section class="carousel-container">
+			<article>
+				<img src="img/carousel-rs6-mobile-1536x1790.jpg" alt="Ubisoft game: Rainbow Six Siege">
+					<h2>Behoud je progressie na het gratis spelen</h2>
+					<h3>Shop de game nu met 67% korting</h3>
+					<button>bekijk nu</button>
+					<p>Free week eindigt 4/9 2020</p>
+			</article>
+			<article>
+				<img src="img/carousel-farcry-mobile-1536x1790.jpg" alt="Ubisoft games">
+					<h2>Check onze komende games</h2>
+					<h3>Krijg 20% korting met 100 Club Units</h3>
+					<button>Pre-Order</button>
+			</article>
+		</section>
+	</main>
 	<script src="scripts/script.js"></script>
 </body>
 
