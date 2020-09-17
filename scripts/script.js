@@ -14,4 +14,4 @@ function closeSidebar() {
 hamburger_icon.onclick = openSidebar
 close_sidebar.onclick = closeSidebar
 
-// einde sidebar js
+// end sidebar js
