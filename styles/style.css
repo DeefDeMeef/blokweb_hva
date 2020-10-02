@@ -19,7 +19,19 @@ body {
   padding: 0px;
   margin: 0px;
   color: #0a0a0a;
+  font: 1.5em;
 }
+
+section:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+/* nog aanpassen !!! */
+h2, h3, p{
+  margin: 0;
+  padding: 0;
+}
+
 /* start header css */
 .main-nav {
   background: #fff;
@@ -92,7 +104,7 @@ body {
   height: 0;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 1001;
   top: 60px;
   left: 0;
   background: #fff;
@@ -111,14 +123,162 @@ body {
   position: absolute;
   width: 100%;
   margin-top: 30px;
-  z-index: 2;
+  z-index: 1001;
   list-style-type: none;
 }
 /* einde sidebar css */
 /* einde header css */
 
-/* start carousel section 1 */
+.carousel-container article {
+  position: relative;
+  text-transform: uppercase;
+}
+
 .carousel-container article img {
-  height: 100%;
+  display: block;
   width: 100%;
+}
+
+.carousel-container div {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.carousel-container article span {
+  position: absolute;
+  background-color: #edb800;
+  top: 20px;
+  left: 0;
+  color: #fff;
+  padding: 5px 15px 5px 10px;
+  font-weight: 900;
+  border-radius: 0 26px 26px 0;
+}
+
+.carousel-container article div h2 {
+  color: #fff;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.carousel-container article div button {
+  background-color: #7469ff;
+  border: none;
+  color: #fff;
+  padding: 1em 4em;
+  border-radius: 2em;
+  font-weight: 800;
+  font-size: 10px;
+  margin: 10px 0px 15px 0px;
+  text-transform: uppercase;
+}
+
+/*  */
+
+.scrollmenu ul {
+  overflow: auto;
+  white-space: nowrap;
+  margin: 0px 0px 0px -20px; 
+}
+
+.scrollmenu h2 {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 100;
+  padding: 0 0 0 20px;
+}
+
+.scrollmenu h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  height: 0;
+  width: 10%;
+  border-bottom: 3px solid #000;
+}
+
+.scrollmenu ul li {
+  display: inline-block;
+  padding: 2px;
+  text-decoration: none;
+  max-width: 45%;
+  margin-top: 20px;
+}
+
+.scrollmenu div {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.scrollmenu ul li a div img:nth-child(odd) {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+
+.scrollmenu ul li a div img:nth-child(even) {
+  max-width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.soon-display > h2 {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 100;
+  padding: 0 0 0 20px;
+}
+
+.soon-display > h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  height: 0;
+  width: 10%;
+  border-bottom: 3px solid #000;
+}
+
+.soon-display article {
+  margin: 20px;
+}
+
+.soon-display article img {
+  max-width: 100%;
+}
+
+/* footer css */
+
+#icon-collector {
+  background-image: url(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUwMCA1MDAiPjxwYXRoIGQ9Ik0xMDIuMDQzIDI5Mi4xNjZMNDguNDEgMjQ0Ljc4OWMtMy41NzYtMi42ODItMy41NzYtOC4wNDYtMS4zNDEtMTEuNjIxIDIuNjgyLTMuNTc2IDguMDQ1LTMuNTc2IDExLjYyLS44OTRsNTMuNjM1IDQ3LjM3N2MzLjU3NiAyLjY4MiAzLjU3NiA4LjA0NS44OTQgMTEuNjIxLTIuNjgyIDMuNTc2LTcuNTk4IDMuNTc2LTExLjE3NC44OTR6TTI3MC4wOTggNDM5LjIxNGwtNTMuNjM0LTQ3LjM3N2MtMy41NzYtMi42ODItMy41NzYtOC4wNDUtLjg5NC0xMS42MjEgMi42ODItMy41NzYgOC4wNDUtMy41NzYgMTEuNjItLjg5NGw1My42MzUgNDcuMzc3YzMuNTc2IDIuNjgyIDMuNTc2IDguMDQ2Ljg5NCAxMS42MjEtMy41NzUgMy41NzYtOC4wNDUgNC40Ny0xMS42Mi44OTR6TTEzMi44ODMgMzMxLjA1MVM2Ny42MjggMjkxLjI3MiAzNSAzODAuMjE2YzE2LjUzNy0uODk0IDI2LjM3LTYuMjU3IDM5Ljc3OS0uODk0IDEzLjQwOSA1LjM2NC02Mi41NzQgMzUuMzEtMzEuNzM0IDEyMC42NzggMzguODg1LTQ0LjI0OSA3NS45ODMtMzcuMDk3IDk2LjA5Ni0zOC44ODUgMjEuMDA2LTEuNzg4IDc1LjA4OC0zNy4wOTcgMzUuMzA5LTkzLjQxNC0xNS4xOTYgMTAuNzI3LTMzLjUyMiA1LjM2NC00Mi40NiAxMi41MTUtOC45NCA3LjE1MSAxOC4zMjQtNDIuMDE0Ljg5My00OS4xNjV6IiBmaWxsPSIjNDBiYWNhIi8+PHBhdGggZD0iTTM2Mi4xNzEgMjUzLjI4YzAtMy41NzUuODk0LTYuMjU3IDMuNTc2LTguMDQ0QzQ4Ni40MjUgMTU4LjA3OSA0NjYuMzEyIDM1LjYxNCA0NjAuMDU0IDguMzQ5Yy0uODk0LTMuNTc1LTMuNTc1LTYuMjU3LTguMDQ1LTcuMTUtMjkuMDUyLTMuNTc3LTE1Mi44NTktNy42LTIyMy4wMyAxMjMuMzU5LTEuNzg4IDIuNjgxLTQuNDcgNC40Ny04LjA0NiA0LjQ3LTY4LjgzIDAtODUuMzY4IDIuNjgxLTExNC40MiAzNy4wOTdsLTQwLjY3MyA0Ni45M2MtMy41NzYgMy41NzUtMi42ODIgOC45MzkuODk0IDEyLjUxNWw1Mi43NCA0Ni45M2MzLjU3NiAzLjU3NiA4Ljk0IDIuNjgyIDEyLjUxNS0uODk0bDEzLjQwOS0xNS4xOTdjMy41NzYtMy41NzUgOC45MzktNC40NyAxMi41MTUtLjg5M0wyMDIuMTYgMjk0LjRsNDQuMjQ5IDM4Ljg4NWMzLjU3NSAzLjU3NSA0LjQ3IDguOTM5Ljg5NCAxMi41MTRsLTEzLjQwOSAxNS4xOTdjLTMuNTc2IDMuNTc2LTIuNjgyIDguOTQuODk0IDEyLjUxNWw1Mi43NCA0Ni45M2MzLjU3NiAzLjU3NiA4Ljk0IDIuNjgyIDEyLjUxNS0uODk0bDM5Ljc4LTQ3LjgyNGMyOS45NDUtMzMuNTIyIDMwLjg0LTUwLjUwNiAyMi4zNDctMTE4LjQ0M3ptLTYzLjAyLTcwLjE3MWMtOC45NC04LjA0NS05LjgzNC0yMS4wMDctMS43ODgtMjkuOTQ2IDguMDQ1LTguOTQgMjEuMDA3LTkuODMzIDI5Ljk0Ni0xLjc4OHM5LjgzMyAyMS4wMDcgMS43ODcgMjkuOTQ2Yy03LjU5OCA3LjU5OC0yMS4wMDYgOC40OTItMjkuOTQ2IDEuNzg4em00OC43MTgtNTYuNzYzYy0xNS4xOTctMTMuNDEtMTYuNTM4LTM2LjIwNC0zLjU3Ni01MC45NTMgMTIuOTYyLTE0Ljc1IDM2LjIwMy0xNi41MzggNTAuOTUzLTMuNTc2IDE1LjE5NiAxMy40MDkgMTYuNTM3IDM2LjIwMyAzLjU3NSA1MC45NTMtMTIuOTYxIDE1LjE5Ni0zNi4yMDMgMTYuOTg0LTUwLjk1MiAzLjU3NnoiIGZpbGw9IiMwMThhYTMiLz48L3N2Zz4=));
+}
+
+/* end footer css */
+
+/*  */
+
+.hide {
+  display: none;
+}
+
+/*  */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }
