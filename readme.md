@@ -7,7 +7,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Bronnenlijst
 1. https://css-tricks.com/almanac/properties/f/flex-wrap/
-2. -bron 2-
+2. https://css-tricks.com/practical-css-scroll-snapping/
 3. -...-
 
 
