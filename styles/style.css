@@ -1,4 +1,3 @@
-/* CSS Document */
 *, *::after, *::before {
   box-sizing:border-box;  
 }
@@ -13,6 +12,12 @@
   src: url('../fonts/ubisoftsans-bold.woff') format('woff');
 }
 
+:root {
+  --loader: 1;
+  --display: block;
+  --height_open: 0;
+}
+
 body {
   font-family: "Ubisoft";
   background: #e5e8f0;
@@ -20,6 +25,21 @@ body {
   margin: 0px;
   color: #0a0a0a;
   font: 1.5em;
+}
+
+#loader {
+  background: url(../img/loading-state.gif) no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+  background-color: #fff;
+  overflow: none;
+  opacity: var(--loader);
+  display: var(--display);
+  transition: 1s;
 }
 
 section:not(:first-of-type) {
@@ -52,6 +72,7 @@ h2, h3, p{
   grid-area: hamburger;
   border: none;
   background: #fff;
+  display: block;
 }
 
 .main-nav a {
@@ -60,15 +81,20 @@ h2, h3, p{
   height: auto;
 }
 
-.main-nav ul {
+.main-nav ul.account-menu {
   grid-area: acount-menu;
   margin: 0;
 }
 
-.main-nav ul li {
+.main-nav ul.account-menu li {
   display:block;
-	float:left;
-  padding: 12px 10px;
+	float:right;
+  padding: 12px 0;
+}
+
+header .main-nav ul.desktop-nav {
+  display: none;
+  grid-area: desktop-nav;
 }
 
 .main-nav form {
@@ -105,7 +131,7 @@ h2, h3, p{
 
 /* sidebar css */
 .sidebar {
-  height: 0;
+  height: var(--height_open);
   width: 100%;
   position: fixed;
   z-index: 1001;
@@ -138,7 +164,7 @@ h2, h3, p{
   text-transform: uppercase;
 }
 
-.carousel-container article img {
+.carousel-container article picture img {
   display: block;
   width: 100%;
 }
@@ -218,10 +244,16 @@ h2, h3, p{
   margin-top: 20px;
 }
 
+.scrollmenu ul li a:hover {
+  top: -10px;
+  outline: #ff8300 5px solid;
+}
+
 .scrollmenu div {
   position: relative;
   top: 0;
   left: 0;
+  transition: 0.3s;
 }
 
 .scrollmenu ul li a div img:nth-child(odd) {
@@ -262,18 +294,12 @@ section.soon-display article {
   position: relative;
   transition: 0.3s;
   top: 0;
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
-.soon-display article div.imageCover {
+.soon-display article img {
   max-width: 100%;
   height: auto;
-  background-color: #000;
-  background-image: url(../img/acorigins.jpg);
-}
-
-section.soon-display article:hover img {
-  top: -15px;
-  background-color: #fff;
 }
 
 section.soon-display div.slider article span.ribbon {
@@ -346,6 +372,18 @@ section.soon-display div.slider article div.card-details span:nth-child(even) {
   font-size: .9375rem;
 }
 
+section.soon-display article:hover {
+  top: -15px;
+  box-shadow: 0px 10px 31px -17px rgba(0,0,0,0.75);
+}
+
+
+section.soon-display div.slider article:focus {
+  top: -15px;
+  box-shadow: 0px 10px 31px -17px rgba(0,0,0,0.75);
+  outline: #ff8300 5px solid;
+}
+
 /*  */
 
 @media screen and (max-width: 768px) {
@@ -354,8 +392,15 @@ section.soon-display div.slider article div.card-details span:nth-child(even) {
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
 
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .scrollmenu ul li {
+    max-width: 30%;
+  }
 
   section.soon-display div.slider {
     scroll-snap-type: none;	
@@ -370,7 +415,7 @@ section.soon-display div.slider article div.card-details span:nth-child(even) {
   }
   
   section.soon-display div.slider article {
-    min-width: 33.3%;
+    min-width: 30%;
     height: auto;
     scroll-snap-align: none;
     position: relative;
@@ -382,4 +427,34 @@ section.soon-display div.slider article div.card-details span:nth-child(even) {
   }
 }
 
+@media screen and (min-width: 1220px) {
+  header nav.main-nav button#open-sidebar {
+    display: none;
+  }
+
+  .main-nav a.logo{
+    display: none;
+  }
+
+  header nav.main-nav ul.desktop-nav {
+    display: inline;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  header nav.main-nav ul.desktop-nav li a svg {
+    width: 150px;
+    height: auto;
+  }
+
+  header nav.main-nav ul.desktop-nav li {
+    display: inline;
+    padding: 0 40px;
+  }
+
+  header nav.main-nav {
+    grid-template-areas:
+      'desktop-nav desktop-nav form form acount-menu';
+  }
+}
 
