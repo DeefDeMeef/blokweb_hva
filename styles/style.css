@@ -16,6 +16,8 @@
   --loader: 1;
   --display: block;
   --height_open: 0;
+  --background: #fff;
+  --hamburger: #008aa4;
 }
 
 body {
@@ -42,6 +44,10 @@ body {
   transition: 1s;
 }
 
+button {
+  cursor: pointer;
+}
+
 section:not(:first-of-type) {
   margin-top: 40px;
 }
@@ -50,13 +56,19 @@ section:not(:first-of-type) {
   display: none;
 }
 
-/* nog aanpassen !!! */
 h2, h3, p{
   margin: 0;
   padding: 0;
 }
 
 /* start header css */
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
 .main-nav {
   background: #fff;
   display: grid;
@@ -134,7 +146,7 @@ header .main-nav ul.desktop-nav {
   height: var(--height_open);
   width: 100%;
   position: fixed;
-  z-index: 1001;
+  z-index: 1002;
   top: 60px;
   left: 0;
   background: #fff;
@@ -145,31 +157,46 @@ header .main-nav ul.desktop-nav {
 .sidebar button {
   width: 100%;
   height: 30px;
-  background: blue;
+  background-color: #008aa4;
   color: #fff;
+  text-align: right;
+  border: none;
 }
 
-.sidebar ul {
+header nav button svg path {
+  fill: var(--hamburger);
+}
+
+header button#open-sidebar {
+  background-color: var(--background);
+}
+
+nav.sidebar ul {
   position: absolute;
   width: 100%;
   margin-top: 30px;
   z-index: 1001;
   list-style-type: none;
 }
+
+nav.sidebar ul li {
+  padding: 30xp;
+  border-bottom: red solid 5px;
+}
 /* einde sidebar css */
 /* einde header css */
 
-.carousel-container article {
+section.carousel-container article {
   position: relative;
   text-transform: uppercase;
 }
 
-.carousel-container article picture img {
+section.carousel-container article picture img {
   display: block;
   width: 100%;
 }
 
-.carousel-container div {
+section.carousel-container article div {
   position: absolute;
   z-index: 1;
   bottom: 10px;
@@ -181,7 +208,11 @@ header .main-nav ul.desktop-nav {
   width: 100%;
 }
 
-.carousel-container article span {
+section.carousel-container article div span {
+  display: none;
+}
+
+section.carousel-container article span {
   position: absolute;
   background-color: #edb800;
   top: 20px;
@@ -192,13 +223,13 @@ header .main-nav ul.desktop-nav {
   border-radius: 0 26px 26px 0;
 }
 
-.carousel-container article div h2 {
+section.carousel-container article div h2 {
   color: #fff;
   margin: 10px;
   font-size: 20px;
 }
 
-.carousel-container article div button {
+section.carousel-container article div button {
   background-color: #7469ff;
   border: none;
   color: #fff;
@@ -386,11 +417,139 @@ section.soon-display div.slider article:focus {
 
 /*  */
 
+section.footer-seo-text {
+  padding: 20px;
+  color: #929db6;
+  font-size: 12px;
+}
+
+section.footer-seo-text span {
+  color: #35c1cf;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/*  */
+
+footer {
+  background-color: #fff;
+}
+
+footer section div.footer-container ul:before {
+  content: attr(data-header);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+footer section ul li {
+  list-style-type: none;
+}
+
+footer section ul.marketing-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0px;
+  border-bottom: 1px solid #dbdde4;
+}
+
+footer section ul.marketing-footer li.iconHide {
+  display: block;
+}
+
+footer section ul.marketing-footer li {
+  font-size: 0.8em;
+  width: 15%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer section ul.marketing-footer li img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+footer section ul.marketing-footer li:nth-child(3) img.ubiCoin {
+  padding: 0;
+  margin: 0;
+  display: inline;
+  height: 10px;
+  width: auto;
+}
+
+footer section div.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.8em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer section div.footer-container ul li {
+  padding: 10px 0px;
+  color: #008aa4;
+}
+
+footer section div.footer-container ul.socials li button {
+  background-color: #fff;
+  border: 1px solid #35c1cf;
+  color: #008aa4;
+  padding: 1em 3em;
+  border-radius: 2em;
+  font-size: 10px;
+  margin: 10px 0px 15px 0px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+footer section div.footer-container ul.socials li button:hover {
+  background-color: #35c1cf;
+  color: #fff;
+}
+
+footer section div.footer-container ul.socials li:nth-child(2), ul.socials li:nth-child(3), ul.socials li:nth-child(4), ul.socials li:nth-child(5), ul.socials li:nth-child(6) {
+  float: left;
+  padding: 10px;
+}
+
+footer section > p {
+  font-size: .6875rem;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.125rem;
+}
+
+/*  */
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 12px;
   }
+
+  footer section div.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  footer section ul.marketing-footer li {
+    width: 33%;
+  }
+
+  footer section ul.marketing-footer li.iconHide {
+    display: none;
+  }
 }
+
+/*  */
 
 @media screen and (min-width: 768px) {
 
@@ -407,7 +566,6 @@ section.soon-display div.slider article:focus {
     display: grid;
     -webkit-overflow-scrolling: none;
     overflow-x: none;
-    min-width: 100vw;
     max-width: 100vw;
     margin-left: 0px;
     grid-template-columns: auto auto auto;
@@ -427,7 +585,10 @@ section.soon-display div.slider article:focus {
   }
 }
 
+/*  */
+
 @media screen and (min-width: 1220px) {
+
   header nav.main-nav button#open-sidebar {
     display: none;
   }
@@ -455,6 +616,39 @@ section.soon-display div.slider article:focus {
   header nav.main-nav {
     grid-template-areas:
       'desktop-nav desktop-nav form form acount-menu';
+  }
+
+  section.carousel-container article div {
+    position: absolute;
+    right: 0;
+    z-index: 1; 
+    transform: translateY(+50%);
+    bottom: 50%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 33%;
+  }
+
+  section.carousel-container article div h2 {
+    margin: 20px 0;
+  }
+
+  section.carousel-container article span {
+    display: none;
+  }
+  
+  section.carousel-container article div span {
+    display: block;
+    position: relative;
+    background-color: #edb800;
+    top: 0px;
+    color: #fff;
+    padding: 5px 15px 5px 10px;
+    font-weight: 900;
+    border-radius: 0 26px 26px 0;
   }
 }
 
