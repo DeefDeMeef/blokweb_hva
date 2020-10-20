@@ -10,7 +10,7 @@ Images geupload naar: https://imgur.com/a/uWDfLEm
 2. https://css-tricks.com/practical-css-scroll-snapping/
 3. -...-
 
-
+![Ubisoft website desktop](images/website.gif)
 
 ## Eindgesprek (week 7/8)
 
