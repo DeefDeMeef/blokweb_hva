@@ -12,6 +12,10 @@ Images geupload naar: https://imgur.com/a/uWDfLEm
 
 ![Ubisoft website desktop](images/website.gif)
 
+<p align="center">
+  <img width="460" height="300" src="images/website.gif">
+</p>
+
 ## Eindgesprek (week 7/8)
 
 -dit ging goed & dit was lastig-
