@@ -56,6 +56,10 @@ section:not(:first-of-type) {
   display: none;
 }
 
+button#scrollToTop {
+  display: none;
+}
+
 h2, h3, p{
   margin: 0;
   padding: 0;
@@ -101,7 +105,7 @@ h2, h3, p{
 .main-nav ul.account-menu li {
   display:block;
 	float:right;
-  padding: 12px 0;
+  padding: 20px 0;
 }
 
 header .main-nav ul.desktop-nav {
@@ -177,12 +181,31 @@ nav.sidebar ul {
   margin-top: 30px;
   z-index: 1001;
   list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 nav.sidebar ul li {
-  padding: 30xp;
-  border-bottom: red solid 5px;
+  position: relative;
+  padding: 10px;
+  border-bottom: #008aa4 solid 1px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+nav.sidebar ul li span {
+  float: right;
+}
+
+nav.sidebar ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav.sidebar ul li:nth-child(4) a {
+  color: #edb800;
+}
+
 /* einde sidebar css */
 /* einde header css */
 
@@ -239,6 +262,11 @@ section.carousel-container article div button {
   font-size: 10px;
   margin: 10px 0px 15px 0px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+section.carousel-container article div button:hover {
+  background-color: #8b82ff;
 }
 
 /*  */
@@ -415,6 +443,167 @@ section.soon-display div.slider article:focus {
   outline: #ff8300 5px solid;
 }
 
+section.product-gallery {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+section.product-gallery > h2, section.product-gallery > p {
+  margin: 10px 0px;
+}
+
+p.breadcrumb {
+  background-color: #fff;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 5px;
+  color: #929db6;
+  border-top: 1px solid #929db6;
+}
+
+p.breadcrumb a {
+  text-decoration: none;
+  color: #929db6;
+}
+
+section div.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+section.product-gallery button {
+  width: 100%;
+  margin: 10px 0px 20px 0px;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #008aa4;
+  border: none;
+  color: #fff;
+  font-family: 'Ubisoft';
+  font-size: .9375rem;
+  display: block;
+}
+
+section div.grid-container aside {
+  grid-row-start: 1;
+  grid-row-end: 3 ;
+  background-color: #fff;
+  padding: 20px;
+  display: block;
+}
+
+section div.grid-container aside div:first-of-type form {
+  width: 100%;
+}
+
+section div.grid-container aside div:first-of-type form p:first-of-type {
+  float: left;
+}
+
+section div.grid-container aside div:first-of-type form p:last-of-type {
+  float: right;
+}
+
+section div.grid-container aside div:not(:first-of-type) p {
+  width: 100%;
+  float: left;
+  margin: 20px 0px;
+}
+
+section div.grid-container aside div:first-of-type form input[type='range'] {
+  width: 100%;
+  -webkit-appearance: none;
+  width: 100%;
+  background: #008aa4;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+section div.grid-container aside div:first-of-type form input[type='range']:hover {
+  opacity: 1;
+}
+
+section div.grid-container article {
+  background-color: #fff;
+  height: auto;
+  position: relative;
+  transition: 0.3s;
+  top: 0;
+}
+
+section div.grid-container article div.card-details {
+  padding: 20px 20px 40px 20px;
+  font-weight: 100;
+}
+
+section div.grid-container article div.card-details h2 {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+section div.grid-container article div.card-details h3 {
+  color: #929db6;
+  font-size: .8rem;
+  font-weight: 100;
+}
+
+section div.grid-container article div.card-details div {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+section div.grid-container article div.card-details span {
+  font-size: 1.5rem;
+}
+
+section div.grid-container article div.card-details span:nth-child(odd) {
+  font-weight: 100;
+  color: #ff8300;
+}
+
+section div.grid-container article div.card-details span:nth-child(even) {
+  font-weight: 100;
+  text-decoration: line-through;
+  color: #929db6;
+  font-size: .9375rem;
+}
+
+section div.grid-container article span.ribbon {
+  position: absolute;
+  background-color: #ff8300;
+  color: #fff;
+  top: -10px;
+  left: 10px;
+  padding: 3px 20px;
+  border-radius: 26px;
+  font-weight: 900;
+  z-index: 1001;
+}
+
+section div.grid-container article:hover {
+  top: -15px;
+  box-shadow: 0px 10px 31px -17px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+
+section.product-gallery div form label {
+  display: block;
+  width: 100%;
+  margin: 10px 0px;
+  color: #008aa4;
+}
+
 /*  */
 
 section.footer-seo-text {
@@ -528,6 +717,11 @@ footer section > p {
 /*  */
 
 @media screen and (max-width: 768px) {
+  
+  button#scrollToTop {
+    z-index: 0;
+  }
+  
   body {
     font-size: 12px;
   }
@@ -546,6 +740,23 @@ footer section > p {
 
   footer section ul.marketing-footer li.iconHide {
     display: none;
+  }
+
+  section div.grid-container article div.card-details span {
+    font-size: 1rem;
+  }
+
+  section div.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  
+  section div.grid-container aside {
+    display: none;
+  }
+
+  section.product-gallery button {
+    display: block;
   }
 }
 
@@ -580,14 +791,51 @@ footer section > p {
     background-color: #fff;
   }
 
+  section div.grid-container article div.card-details span {
+    font-size: 1rem;
+  }
+
   section.soon-display div.slider article img {
     width: 100%;
+  }
+
+  section div.grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  section div.grid-container aside {
+    display: none;
+  }
+
+  section.product-gallery button {
+    display: block;
   }
 }
 
 /*  */
 
 @media screen and (min-width: 1220px) {
+
+  button#scrollToTop {
+    display: block;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9999999;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #008aa4;
+    color: #008aa4;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+  }
+
+  button#scrollToTop:hover {
+    background-color: #008aa4;
+    color: #fff;
+  }
 
   header nav.main-nav button#open-sidebar {
     display: none;
@@ -598,9 +846,10 @@ footer section > p {
   }
 
   header nav.main-nav ul.desktop-nav {
-    display: inline;
-    display: table-cell;
-    vertical-align: middle;
+    display: table;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 15px;
   }
 
   header nav.main-nav ul.desktop-nav li a svg {
@@ -609,13 +858,48 @@ footer section > p {
   }
 
   header nav.main-nav ul.desktop-nav li {
-    display: inline;
-    padding: 0 40px;
+    display: table-cell;
+    padding: 15px 5px;
+    vertical-align: middle;
+    border-bottom: 4px solid #fff;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  header nav.main-nav ul.desktop-nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #008aa4;
+  }
+
+  header nav.main-nav ul.desktop-nav li:nth-child(5) a {
+    color: #FF8300;
+  }
+
+  header nav.main-nav ul.desktop-nav li:hover:not(:first-of-type) {
+    border-bottom: 4px solid #008aa4;
+  }
+
+  header nav.main-nav ul.desktop-nav li:nth-child(5):hover {
+    border-bottom: 4px solid #FF8300;
   }
 
   header nav.main-nav {
     grid-template-areas:
-      'desktop-nav desktop-nav form form acount-menu';
+      'desktop-nav desktop-nav desktop-nav acount-menu acount-menu acount-menu'
+      'form form form form form form';
+      grid-gap: 0px;
+  }
+
+  header nav.main-nav ul.account-menu {
+    display: table;
+    margin: 0;
+  }
+
+  header nav.main-nav ul.account-menu li {
+    display: table-cell;
+    vertical-align: middle;
   }
 
   section.carousel-container article div {
@@ -650,5 +934,21 @@ footer section > p {
     font-weight: 900;
     border-radius: 0 26px 26px 0;
   }
-}
 
+  section div.grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  section div.grid-container aside {
+    display: block;
+  }
+
+  section.product-gallery button {
+    display: none;
+  }
+
+  section div.grid-container article div.card-details span {
+    font-size: 1.5rem;
+  }
+}

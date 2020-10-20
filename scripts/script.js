@@ -29,7 +29,7 @@ function hideLoader() {
 }
 
 window.onload = (event) => {
-	setTimeout(hideLoader, 500)
+	setTimeout(hideLoader, 1000)
 	console.log("page loading...")
 }
 // end loader
@@ -50,3 +50,13 @@ function stickyToggle() {
 }
 
 // end sticky navbar
+
+// start scroll to top
+var scrollToTop = document.getElementById("scrollToTop")
+
+function scroll() {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+scrollToTop.addEventListener('click', scroll)
+// end scroll top top
