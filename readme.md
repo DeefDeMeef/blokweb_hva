@@ -1,7 +1,8 @@
 # Procesverslag
 **Auteur:** Davey Zaal
 
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Nb. de standaardstructuur en de spartaanse opmaak zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
+Om op mijn 2e pagina te komen:
+vanaf index.html --> "games" in de navigatie.
 
 ## Bronnenlijst
 1. https://css-tricks.com/almanac/properties/f/flex-wrap/
@@ -60,7 +61,7 @@ Toen ben ik als een waterfal naar beneden gaan werken, het volgende was een bann
   <img src="images/voortgang1.png">
 </p>
 <p align="center">
-  <img width="100%" src="images/voortgang3.png">
+  <img src="images/voortgang2.png">
 </p>
 
 ### Agenda voor meeting
@@ -96,7 +97,7 @@ Het moet namelijk een carousel zijn op mobiel waarbij je de hele width steeds ka
 
 ### Verslag van meeting
 
-Ik zat eerst in de meeting met Sam en toen probeerder we samen een goede oplossing te bedenken maar we kwamen niet echt tot een simpele oplossing. Toen kwam Joost terug en hebben het vervolgens besproken met hem en hij zei meteen "is css scroll snapping niet wat?". Ik had er nog nooit van gehoord maar ik heb het daarna geprobeerd en binnen een kwartier werkte het precies zoals ik wilde. Dus bedankt Sam & Joost!
+Ik zat eerst in de meeting met Sam en toen probeerde we samen een goede oplossing te bedenken maar we kwamen niet echt tot een simpele oplossing. Toen kwam Joost terug en hebben we het vervolgens besproken met hem en hij zei meteen "is css scroll snapping niet wat?". Ik had er nog nooit van gehoord maar ik heb het daarna geprobeerd en binnen een kwartier werkte het precies zoals ik wilde. Dus bedankt Sam & Joost!
 
 <!--  -->
 
@@ -136,7 +137,11 @@ Wat goed ging tijden dit vak was het zelf debuggen van bugs en het sschrijven va
 
 Ik heb eigenlijk niet heel veel problemen gehad tijdens het maken van de website, behalve dan kleine bugs maar dat heb je altijd bij het maken van een website. Het is eigenlijk niet voorgekomen dat ik niet verder kon omdat ik vast liep of iets dergelijks. Het ging eigenlijk erg goed.
 
+De laatste weken heb ik ook volop gewerkt aan de 2e pagina om de opdracht helemaal af te kunnen ronden. Dit ging erg gemakkelijk omdat ik styling en structuur kon pikken van me index pagina.
+
 **Screenshot(s):**
+
+Pagina 1 (index.html):
 
 <p align="center">
   <img src="images/eindresultaat-mobile.png">
@@ -148,3 +153,14 @@ Ik heb eigenlijk niet heel veel problemen gehad tijdens het maken van de website
   <img src="images/eindresultaat-desktop.png">
 </p>
 
+Pagina 2 (games.html)
+
+<p align="center">
+  <img src="images/eindresultaat-mobile2.png">
+</p>
+<p align="center">
+  <img src="images/eindresultaat-tablet2.png">
+</p>
+<p align="center">
+  <img src="images/eindresultaat-desktop2.png">
+</p>

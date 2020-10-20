@@ -36,17 +36,19 @@ window.onload = (event) => {
 
 // start sticky navbar
 
-window.onscroll = function() {stickyToggle()};
+window.onscroll = function () {
+	stickyToggle()
+};
 
 var header = document.getElementById("header");
 var sticky = header.offsetTop;
 
 function stickyToggle() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
+	if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+	} else {
+		header.classList.remove("sticky");
+	}
 }
 
 // end sticky navbar
@@ -55,7 +57,10 @@ function stickyToggle() {
 var scrollToTop = document.getElementById("scrollToTop")
 
 function scroll() {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	});
 }
 
 scrollToTop.addEventListener('click', scroll)
